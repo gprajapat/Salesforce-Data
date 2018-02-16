@@ -16,8 +16,15 @@
             <pathelement location="./lib/ant-salesforce.jar" />        	
         </classpath>
     </taskdef>
-    
-    <target name="deployCode">
+    <target name="myProxy">
+	   <property name="proxy.host" value="10.238.54.132"/>
+	   <property name="proxy.port" value="6050"/>
+	   <property name="proxy.user" value="638443"/>
+	   <property name="proxy.pwd" value="Fate4@new"/>
+	   <setproxy proxyhost="${proxy.host}" proxyport="${proxy.port}"   proxyuser="${proxy.user}" proxypassword="${proxy.pwd}" />
+	   <setproxy proxyhost="${proxy.host}" proxyport="${proxy.port}" />
+	</target>
+    <target name="deployCode" depends="myProxy">
       <sf:deploy username="${sf.username}" password="${sf.password}" sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="./src" rollbackOnError="true"/>
     </target>
 	
