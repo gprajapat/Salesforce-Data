@@ -20,7 +20,7 @@
 	   <property name="proxy.host" value="10.238.54.132"/>
 	   <property name="proxy.port" value="6050"/>
 	   <property name="proxy.user" value="638443"/>
-	   <property name="proxy.pwd" value="Fate4@new"/>
+	   <property name="proxy.pwd" value=""/>
 	   <setproxy proxyhost="${proxy.host}" proxyport="${proxy.port}"   proxyuser="${proxy.user}" proxypassword="${proxy.pwd}" />
 	   <setproxy proxyhost="${proxy.host}" proxyport="${proxy.port}" />
 	</target>
